@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="main.html">Home</a>
+        <a href="skill.html">skill</a>
+        <a href="sertifikat.html">sertifikat</a>
+        <a href="portfolio.html">portfolio</a>
+        <a href="kontak.html">Contact</a>
+    </nav>
+
+    <canvas id="myChart" width="1000" height="400"></canvas>
+
+    <footer>
+        <p>&copy; 2023 Habil jabbal Firdausyi. Hak Cipta Dilindungi.</p>
+    </footer>
+</body>
+
+
+
+<script>
+  const ctx = document.getElementById('myChart').getContext('2d');
+  const data = {
+    labels: ['HTML', 'CSS', 'JS','PYTHON','SQL','PHP'],
+    datasets: [{
+      label: 'persentase',
+      data: [80, 75, 40,40,25,30],
+      backgroundColor: ['#ff0000'],
+    }],
+  };
+  const chart = new Chart(ctx, {
+    type: 'bar',
+    data: data,
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+</html>
